@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App gastos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="resources/gastos.css">
+</head>
+<body>
+    <h1>App de Gastos</h1>
+    <div class="row">
+        <div class="col l4 offset-l1 s12">
+            <form id="formulario">
+                <div>
+                    <span>Transacción</span>
+                    <hr>
+                    <p>
+                        <label>
+                            <input value="Ingreso" class="with-gap" name="tselector" type="radio" required/>
+                            <span>Ingreso</span>        
+                        </label>
+                        <label>
+                            <input value="Egreso" class="with-gap" name="tselector" type="radio" required/>
+                            <span>Egreso</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <label for="desc">Descripcion</label>
+                    <input type="text" id="desc" name="desc" required>
+                </div>
+                <div class="input-field">
+                    <label for="mnt">Monto</label>
+                    <input type="number" id="mnt" name="mnt" required>
+                </div>
+                <div>
+                    <label for="cat">Categoria</label>
+                    <select class="browser-default" type="text" id="cat" name="cat" required>
+                        <option disabled selected>Elige una categoria</option>
+                    </select>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="send">Añadir
+                    <i class="material-icons right">send</i>
+                </button> 
+            </form>
+        </div>
+        <div class="col l5 offset-l1 s12">
+            <table id="tstable">
+                <tbody>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descripcion</th>
+                        <th>Monto</th>
+                        <th>Categoria</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="resources/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
