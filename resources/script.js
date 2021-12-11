@@ -91,7 +91,7 @@ function insertCategory(categoryName){
 }
 
 function drawCategory(){
-    let allCategory = ["Comida","Placer","Trabajo"];
+    let allCategory = ["Comida","Ocio","Trabajo","Ropa"];
     for(let index = 0; index < allCategory.length; index++){
         insertCategory(allCategory[index]); 
     }
